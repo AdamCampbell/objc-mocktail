@@ -23,6 +23,10 @@
 @property (nonatomic, readonly) NSInteger statusCode;
 @property (nonatomic, weak) Mocktail *mocktail;
 
+- (instancetype)init NS_UNAVAILABLE;
+
+- (instancetype)initWithFileAtURL:(NSURL *)fileURL NS_DESIGNATED_INITIALIZER;
+
 + (MocktailResponse *)mocktailResponseForFileAtURL:(NSURL *)url;
 
 @end
